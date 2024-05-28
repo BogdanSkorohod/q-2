@@ -1,0 +1,72 @@
+/* Mobile First Styles */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif,
+    sans-serif;
+}
+
+.container {
+  padding: 20px;
+}
+
+.block {
+  margin-bottom: 20px;
+}
+
+.text-content {
+  margin-bottom: 20px;
+  width: 480px;
+  height: 232px;
+}
+
+.visual-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.visual-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tablet and larger devices */
+@media (min-width: 768px) {
+  .block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .text-content,
+  .visual-content {
+    flex: 1;
+    margin: 10px;
+  }
+
+  .visual-content {
+    flex-direction: row;
+  }
+
+  .visual-content .chart,
+  .visual-content .bar-chart {
+    flex: 1;
+  }
+}
+
+/* Desktop and larger devices */
+@media (min-width: 1024px) {
+  .block {
+    margin-bottom: 40px;
+  }
+
+  .text-content {
+    flex: 2;
+  }
+
+  .visual-content .chart,
+  .visual-content .bar-chart {
+    flex: 1.5;
+  }
+}
